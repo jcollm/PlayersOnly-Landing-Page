@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
 
 export default function CallToAction() {
-  return <Button content="Call to Action ->" />;
+  return <Button>{"Call to Action ->"}</Button>;
 }
