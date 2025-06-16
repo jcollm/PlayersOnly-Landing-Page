@@ -1,3 +1,4 @@
+import { FeatureSection } from "@/components/FeatureSection";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -25,6 +26,17 @@ export default function Home() {
           <Button variant="destructive">Get Started</Button>
         </div>
       </div>
+      <FeatureSection
+        title="Fast, Flexible, Beautiful"
+        text="Our framework makes development a breeze across all screen sizes. Vercel can host your website for you, although it does require a build as opposed to running through localhost. this makes the devlopment process slightly more tedious but overall more shareable."
+        image="/vercel.svg"
+      />
+      <FeatureSection
+        title="Section 2"
+        text="another section which text which demonstrates simplicity, and complexity all at the same time. with an emphasis on compatibility with existing softwares and devlopment processes."
+        image="/next.svg"
+        reverse
+      />
     </div>
     // <div>
     //   <img className="z-0 max-w-full" src="/judge.jpg" />
