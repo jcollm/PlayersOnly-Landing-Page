@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
+import Image from "next/image";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -27,9 +28,16 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <div className="flex flex-row max-w-full gap-8 p-6 bg-gray-500">
-          <Button variant="secondary" size="icon" className="size-16">
-            <img className="" src="/logo.png" alt="PlayersOnly" />
-          </Button>
+          <Link href="/" className="inline-block">
+            <Image
+              src="/logo.png"
+              alt="PlayersOnly"
+              width={60}
+              height={60}
+              priority
+              className="h-auto w-auto"
+            />
+          </Link>
           <NavigationMenu className="items-center">
             <NavigationMenuList>
               <NavigationMenuItem>
