@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "motion/react";
+import type { HTMLMotionProps } from "motion/react";
 
 export function FadeIn({
   children,
@@ -8,7 +9,7 @@ export function FadeIn({
 }: {
   children: React.ReactNode;
   time?: number;
-}) {
+} & HTMLMotionProps<"div">) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}

@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "motion/react";
+import { FadeIn } from "./FadeIn";
 
 export function FeatureSection({
   title,
@@ -13,14 +14,10 @@ export function FeatureSection({
   reverse?: boolean;
 }) {
   return (
-    <motion.div
+    <FadeIn
       className={`flex flex-col md:flex-row ${
         reverse ? "md:flex-row-reverse" : ""
       } items-center gap-8 my-16 px-4 md:px-12`}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true }}
     >
       <div className="w-full md:w-1/2">
         <img
@@ -37,6 +34,6 @@ export function FeatureSection({
           {text}
         </p>
       </div>
-    </motion.div>
+    </FadeIn>
   );
 }
