@@ -1,6 +1,7 @@
 import { FadeIn } from "@/components/FadeIn";
 import { FeatureSection } from "@/components/FeatureSection";
 import { HoverEffect } from "@/components/HoverEffect";
+import { SummaryChunk } from "@/components/SummaryChunk";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
@@ -75,6 +76,100 @@ export default function Home() {
           image="/placeholder.png"
         />
       </section>
+      <Separator className="my-20" />
+      <section className="flex flex-col lg:flex-row justify-center items-baseline my-20 ">
+        <div className="flex flex-row justify-around items-baseline">
+          <SummaryChunk
+            title="Controls"
+            text="Aliquam consequat lectus at lacinia volutpat. Duis blandit enim sit amet dolor sollicitudin faucibus. Quisque imperdiet diam vel dolor luctus condimentum. Etiam vel dolor eu diam consequat hendrerit id in eros."
+            icon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5"
+                />
+              </svg>
+            }
+          />
+          <SummaryChunk
+            title="Learning"
+            text="Aenean vel nisl leo. Sed facilisis, magna a semper tincidunt, nunc mi auctor orci, et ultrices justo nisl fermentum nulla. Phasellus volutpat, sapien ac tincidunt dapibus, ligula nisl iaculis orci, nec tempor ex neque nec nunc."
+            icon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
+                />
+              </svg>
+            }
+          />
+        </div>
+        <div className="flex flex-row justify-around items-baseline">
+          <SummaryChunk
+            title="Analytics"
+            text="Ut efficitur quam at eros auctor facilisis. Fusce pellentesque quis dolor non luctus. Quisque et erat nunc. Nullam eget rutrum tortor. Donec eget dui nec quam congue luctus. Etiam viverra accumsan lectus, id feugiat lectus iaculis a."
+            icon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"
+                />
+              </svg>
+            }
+          />
+          <SummaryChunk
+            title="SEO"
+            text="Curabitur gravida imperdiet est ac luctus. Duis sed ullamcorper dolor. Phasellus ut luctus odio, sit amet imperdiet odio. Nam varius nec dui non dapibus."
+            icon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                />
+              </svg>
+            }
+          />
+        </div>
+      </section>
+      <Separator className="my-20" />
+      <div className="h-50"></div>
     </>
     // <div>
     //   <img className="z-0 max-w-full" src="/judge.jpg" />

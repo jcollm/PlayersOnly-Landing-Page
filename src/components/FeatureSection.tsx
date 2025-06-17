@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "motion/react";
 import { FadeIn } from "./FadeIn";
 
 export function FeatureSection({
