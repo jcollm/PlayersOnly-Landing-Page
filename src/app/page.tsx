@@ -24,23 +24,21 @@ export default function Home() {
 
         {/* Centered content */}
         <div className="relative z-20 flex items-center justify-center h-screen">
-          <div className="bg-black/30 backdrop-blur-sm rounded-xl p-8 shadow-xl text-center min-w-fit max-w-2xl m-8">
-            <h1 className="text-5xl font-bold mb-4 text-white leading-[4rem]">
+          <div className="bg-white/30 dark:bg-black/30 backdrop-blur-sm rounded-xl p-8 shadow-xl text-center min-w-fit max-w-2xl m-8">
+            <h1 className="text-5xl font-bold mb-4 leading-[4rem]">
               Connecting Brands with Athletes
             </h1>
-            <div className="text-lg text-white mb-6 flex items-center justify-center flex-row gap-8 h-full">
-              <p>Giving brands the ability to find successful deals</p>
-              <Separator
-                orientation="vertical"
-                className="min-h-16 bg-white/30"
-              />
-              <p>Providing athletes with social media management tools</p>
+            <div className="text-lg mb-6 flex items-center justify-center flex-row gap-8 h-full">
+              <p className="text-lg">
+                Giving brands the ability to find successful deals
+              </p>
+              <Separator orientation="vertical" className="min-h-16" />
+              <p className="text-lg">
+                Providing athletes with social media management tools
+              </p>
             </div>
-            <div className="flex flex-row justify-self-end">
-              <Button
-                variant="ghost"
-                className="bg-white/20 text-white backdrop-blur border border-white/30 hover:bg-white/30"
-              >
+            <div className="flex flex-row justify-self-start">
+              <Button variant="default" className=" min-w-[10rem] h-12">
                 Get Started
               </Button>
             </div>
