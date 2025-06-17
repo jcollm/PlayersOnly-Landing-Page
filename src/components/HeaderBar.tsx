@@ -20,6 +20,12 @@ import {
 import { Button } from "./ui/button";
 
 export function HeaderBar({ children }: { children: React.ReactNode }) {
+  const navItems = [
+    { title: "Brands", href: "https://playersonly.io/insights" },
+    { title: "Athletes", href: "https://playersonly.io/athletes" },
+    { title: "AI", href: "https://www.playersonly.ai/" },
+    { title: "About", href: "https://playersonly.io/about" },
+  ];
   return (
     <>
       <div className="sticky top-0 z-50 flex items-center justify-center w-full bg-background border-b-2 h-20">
@@ -59,38 +65,13 @@ export function HeaderBar({ children }: { children: React.ReactNode }) {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="min-w-fit" align="start">
                   <DropdownMenuGroup>
-                    <DropdownMenuItem asChild>
-                      <Link
-                        href="https://playersonly.io/insights"
-                        className="text-xl"
-                      >
-                        Brands
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link
-                        href="https://playersonly.io/athletes"
-                        className="text-xl"
-                      >
-                        Athletes
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link
-                        href="https://www.playersonly.ai/"
-                        className="text-xl"
-                      >
-                        AI
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link
-                        href="https://playersonly.io/about"
-                        className="text-xl"
-                      >
-                        About
-                      </Link>
-                    </DropdownMenuItem>
+                    {navItems.map((item) => (
+                      <DropdownMenuItem key={item.title} asChild>
+                        <Link href={item.href} className="text-xl">
+                          {item.title}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
                   </DropdownMenuGroup>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -98,54 +79,17 @@ export function HeaderBar({ children }: { children: React.ReactNode }) {
             <div className="hidden md:block">
               <NavigationMenu orientation="horizontal">
                 <NavigationMenuList>
-                  <HoverEffect y={-4}>
-                    <NavigationMenuItem>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="https://playersonly.io/insights"
-                          className="text-xl"
-                        >
-                          Brands
-                        </Link>
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                  </HoverEffect>
-                  <HoverEffect y={-4}>
-                    <NavigationMenuItem>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="https://playersonly.io/athletes"
-                          className="text-xl"
-                        >
-                          Athletes
-                        </Link>
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                  </HoverEffect>
-                  <HoverEffect y={-4}>
-                    <NavigationMenuItem>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="https://www.playersonly.ai/"
-                          className="text-xl"
-                        >
-                          AI
-                        </Link>
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                  </HoverEffect>
-                  <HoverEffect y={-4}>
-                    <NavigationMenuItem>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="https://playersonly.io/about"
-                          className="text-xl"
-                        >
-                          About
-                        </Link>
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                  </HoverEffect>
+                  {navItems.map((item) => (
+                    <HoverEffect y={-4} key={item.title}>
+                      <NavigationMenuItem>
+                        <NavigationMenuLink asChild>
+                          <Link href={item.href} className="text-xl">
+                            {item.title}
+                          </Link>
+                        </NavigationMenuLink>
+                      </NavigationMenuItem>
+                    </HoverEffect>
+                  ))}
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
