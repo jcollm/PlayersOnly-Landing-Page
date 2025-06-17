@@ -1,4 +1,5 @@
 import { FeatureSection } from "@/components/FeatureSection";
+import { HoverEffect } from "@/components/HoverEffect";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
@@ -17,30 +18,38 @@ export default function Home() {
         />
 
         {/* Gradient overlay */}
-        <div
-          className="absolute inset-0 z-10 bg-gradient-to-b 
-                  from-0% via-white/30 to-white dark:via-black/30 dark:to-black"
-        />
+        <div className="absolute z-10 bg-gradient-to-b from-transparent via-background/30 to-background bottom-0 w-full h-32" />
 
         {/* Centered content */}
+
         <div className="relative z-20 flex items-center justify-center h-screen">
-          <div className="bg-white/30 dark:bg-black/30 backdrop-blur-sm rounded-xl p-8 shadow-xl text-center min-w-fit max-w-2xl m-8">
+          <div className="filter bg-background/50 dark:bg-background/30 backdrop-blur-sm rounded-xl p-8 backdrop-contrast-100 text-center max-w-3xl m-9">
             <h1 className="text-5xl font-bold mb-4 leading-[4rem]">
-              Connecting Brands with Athletes
+              Share your Brand
             </h1>
             <div className="text-lg mb-6 flex items-center justify-center flex-row gap-8 h-full">
               <p className="text-lg">
-                Giving brands the ability to find successful deals
+                Connecting brands with social media partners that can deliver
+                them results and consistency
               </p>
               <Separator orientation="vertical" className="min-h-16" />
               <p className="text-lg">
-                Providing athletes with social media management tools
+                Becoming an early partner gives your brand access to modern
+                analytics and tracking
               </p>
             </div>
-            <div className="flex flex-row justify-self-start">
-              <Button variant="default" className=" min-w-[10rem] h-12">
-                Get Started
-              </Button>
+            <div className="flex flex-row justify-self-start gap-8">
+              <HoverEffect scale={1.1}>
+                <Button
+                  variant="default"
+                  className=" min-w-[10rem] h-12 text-lg"
+                >
+                  <p>Book a Demo</p>
+                </Button>
+              </HoverEffect>
+              <div className="border-2 rounded-3xl justify-center items-center flex p-3 shadow-md h-12 leading-5">
+                <b>30+ current partner brands</b>
+              </div>
             </div>
           </div>
         </div>

@@ -29,7 +29,7 @@ export function FeatureSection({
           className="w-full h-auto rounded-xl shadow-lg"
         />
       </div>
-      <div className="w-full md:w-1/2">
+      <div className="w-full md:w-1/2 p-8">
         <h2 className="text-3xl font-semibold mb-4">{title}</h2>
         <p className="text-lg text-gray-700 dark:text-gray-300">{text}</p>
       </div>
