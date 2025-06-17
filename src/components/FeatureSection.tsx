@@ -13,7 +13,7 @@ export function FeatureSection({
   reverse?: boolean;
 }) {
   return (
-    <motion.section
+    <motion.div
       className={`flex flex-col md:flex-row ${
         reverse ? "md:flex-row-reverse" : ""
       } items-center gap-8 my-16 px-4 md:px-12`}
@@ -31,8 +31,8 @@ export function FeatureSection({
       </div>
       <div className="w-full md:w-1/2">
         <h2 className="text-3xl font-semibold mb-4">{title}</h2>
-        <p className="text-lg text-gray-700">{text}</p>
+        <p className="text-lg text-gray-700 dark:text-gray-300">{text}</p>
       </div>
-    </motion.section>
+    </motion.div>
   );
 }

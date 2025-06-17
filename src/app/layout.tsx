@@ -26,8 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        <div className="flex flex-row max-w-full gap-8 p-6 bg-gray-500">
+      <body className="antialiased bg-white dark:bg-black text-black dark:text-white">
+        <div className="flex flex-row max-w-full gap-8 p-6">
           <Link href="/" className="inline-block">
             <Image
               src="/logo.png"
@@ -38,9 +38,17 @@ export default function RootLayout({
               className="h-auto w-auto"
             />
           </Link>
-          <NavigationMenu className="items-center">
+          <NavigationMenu orientation="horizontal" className="items-center">
             <NavigationMenuList>
               <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="https://playersonly.io/insights"
+                    className="text-xl"
+                  >
+                    Brands
+                  </Link>
+                </NavigationMenuLink>
                 <NavigationMenuLink asChild>
                   <Link
                     href="https://playersonly.io/athletes"

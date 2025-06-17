@@ -1,43 +1,66 @@
 import { FeatureSection } from "@/components/FeatureSection";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen">
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/judge.jpg')", // put your image in /public/images
-        }}
-      />
+    <>
+      <div className="relative h-screen w-full overflow-hidden">
+        {/* Background image */}
+        <Image
+          src="/judge.jpg"
+          alt="Aaron Judge hits a home run"
+          fill
+          priority
+          className="object-cover z-0"
+        />
 
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent" />
+        {/* Gradient overlay */}
+        <div
+          className="absolute inset-0 z-10 bg-gradient-to-b 
+                  from-0% via-white/30 to-white dark:via-black/30 dark:to-black"
+        />
 
-      {/* Centered content */}
-      <div className="relative z-10 flex items-center justify-center h-screen">
-        <div className="bg-white/70 backdrop-blur-sm rounded-xl p-8 shadow-xl text-center max-w-md">
-          <h1 className="text-4xl font-bold mb-4 text-gray-900">Welcome</h1>
-          <p className="text-lg text-gray-700 mb-6">
-            This is the hero section of your homepage.
-          </p>
-          <Button variant="destructive">Get Started</Button>
+        {/* Centered content */}
+        <div className="relative z-20 flex items-center justify-center h-screen">
+          <div className="bg-black/30 backdrop-blur-sm rounded-xl p-8 shadow-xl text-center min-w-fit max-w-2xl m-8">
+            <h1 className="text-5xl font-bold mb-4 text-white leading-[4rem]">
+              Connecting Brands with Athletes
+            </h1>
+            <div className="text-lg text-white mb-6 flex items-center justify-center flex-row gap-8 h-full">
+              <p>Giving brands the ability to find successful deals</p>
+              <Separator
+                orientation="vertical"
+                className="min-h-16 bg-white/30"
+              />
+              <p>Providing athletes with social media management tools</p>
+            </div>
+            <div className="flex flex-row justify-self-end">
+              <Button
+                variant="ghost"
+                className="bg-white/20 text-white backdrop-blur border border-white/30 hover:bg-white/30"
+              >
+                Get Started
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
-      <FeatureSection
-        title="Fast, Flexible, Beautiful"
-        text="Our framework makes development a breeze across all screen sizes. Vercel can host your website for you, although it does require a build as opposed to running through localhost. this makes the devlopment process slightly more tedious but overall more shareable."
-        image="/vercel.svg"
-      />
-      <FeatureSection
-        title="Section 2"
-        text="another section which text which demonstrates simplicity, and complexity all at the same time. with an emphasis on compatibility with existing softwares and devlopment processes."
-        image="/next.svg"
-        reverse
-      />
-    </div>
+      <section className="">
+        <FeatureSection
+          title="Fast, Flexible, Beautiful"
+          text="Our framework makes development a breeze across all screen sizes. Vercel can host your website for you, although it does require a build as opposed to running through localhost. this makes the devlopment process slightly more tedious but overall more shareable."
+          image="/socialmedia.png"
+        />
+        <FeatureSection
+          title="Section 2"
+          text="another section which text which demonstrates simplicity, and complexity all at the same time. with an emphasis on compatibility with existing softwares and devlopment processes."
+          image="/po_insights_details.png"
+          reverse
+        />
+      </section>
+    </>
     // <div>
     //   <img className="z-0 max-w-full" src="/judge.jpg" />
     //   <div className="bg-gradient-to-r from-cyan-500 to-blue-500 h-32">
