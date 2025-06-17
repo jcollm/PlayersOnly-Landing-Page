@@ -19,7 +19,7 @@ export function FeatureSection({
       } items-center gap-8 my-16 px-4 md:px-12`}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
       <div className="w-full md:w-1/2">
@@ -29,9 +29,13 @@ export function FeatureSection({
           className="w-full h-auto rounded-xl shadow-lg"
         />
       </div>
-      <div className="w-full md:w-1/2 p-8">
-        <h2 className="text-3xl font-semibold mb-4">{title}</h2>
-        <p className="text-lg text-gray-700 dark:text-gray-300">{text}</p>
+      <div className="w-full md:w-1/2 p-0 sm:p-8">
+        <h2 className="text-3xl font-semibold mb-4 text-center md:text-left">
+          {title}
+        </h2>
+        <p className="text-lg text-gray-700 dark:text-gray-300 text-center md:text-left">
+          {text}
+        </p>
       </div>
     </motion.div>
   );

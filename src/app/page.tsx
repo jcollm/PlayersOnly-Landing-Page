@@ -1,3 +1,4 @@
+import { FadeIn } from "@/components/FadeIn";
 import { FeatureSection } from "@/components/FeatureSection";
 import { HoverEffect } from "@/components/HoverEffect";
 import { Button } from "@/components/ui/button";
@@ -23,11 +24,11 @@ export default function Home() {
         {/* Centered content */}
 
         <div className="relative z-20 flex items-center justify-center h-screen">
-          <div className="filter bg-background/50 dark:bg-background/30 backdrop-blur-sm rounded-xl p-8 backdrop-contrast-100 text-center max-w-3xl m-9">
+          <div className="filter bg-background/70 dark:bg-background/30 backdrop-blur-sm rounded-xl p-4 md:p-8 backdrop-contrast-100 text-center max-w-3xl m-9 overflow-hidden">
             <h1 className="text-5xl font-bold mb-4 leading-[4rem]">
-              Share your Brand
+              PlayersOnly Brand Partners
             </h1>
-            <div className="text-lg mb-6 flex items-center justify-center flex-row gap-8 h-full">
+            <div className="text-lg mb-6 flex items-center justify-center flex-row gap-2 md:gap-8 h-full">
               <p className="text-lg">
                 Connecting brands with social media partners that can deliver
                 them results and consistency
@@ -47,9 +48,11 @@ export default function Home() {
                   <p>Book a Demo</p>
                 </Button>
               </HoverEffect>
-              <div className="border-2 rounded-3xl justify-center items-center flex p-3 shadow-md h-12 leading-5">
-                <b>30+ current partner brands</b>
-              </div>
+              <FadeIn time={1.3}>
+                <div className="border-2 rounded-3xl justify-center items-center flex p-3 shadow-md h-24 sm:h-12 leading-5">
+                  <b>30+ current partner brands</b>
+                </div>
+              </FadeIn>
             </div>
           </div>
         </div>
@@ -57,12 +60,12 @@ export default function Home() {
       <section className="">
         <FeatureSection
           title="Fast, Flexible, Beautiful"
-          text="Our framework makes development a breeze across all screen sizes. Vercel can host your website for you, although it does require a build as opposed to running through localhost. this makes the devlopment process slightly more tedious but overall more shareable."
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor lorem odio, sit amet consectetur magna vestibulum nec. Sed mollis sollicitudin mattis. Praesent velit purus, sodales et mi in, mattis consequat nibh. Mauris urna ex, finibus nec posuere non, efficitur faucibus mauris. Ut ac condimentum quam."
           image="/socialmedia.png"
         />
         <FeatureSection
-          title="Section 2"
-          text="another section which text which demonstrates simplicity, and complexity all at the same time. with an emphasis on compatibility with existing softwares and devlopment processes."
+          title="Benefits of Partnership"
+          text="Nulla in turpis congue, auctor nisi sit amet, ornare lectus. Aenean mollis congue fermentum. Sed lacinia dolor sed nibh venenatis consequat in a ante. Phasellus id erat ultrices dui rhoncus accumsan sed et magna. Vivamus eget nibh malesuada, viverra nibh dictum, mattis orci."
           image="/po_insights_details.png"
           reverse
         />

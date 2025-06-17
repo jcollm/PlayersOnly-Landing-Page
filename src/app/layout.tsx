@@ -1,21 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Link from "next/link";
-import Image from "next/image";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
-import { Button } from "@/components/ui/button";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "@/components/ModeToggle";
-import { HoverEffect } from "@/components/HoverEffect";
+import { HeaderBar } from "@/components/HeaderBar";
 
 export const metadata: Metadata = {
   title: "PlayersOnly",
@@ -36,76 +22,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-row items-center justify-between p-6">
-            <div className="flex flex-row gap-8">
-              <Link href="/" className="inline-block">
-                <HoverEffect scale={1.1}>
-                  <Image
-                    src="/logo.png"
-                    alt="PlayersOnly"
-                    width={60}
-                    height={60}
-                    priority
-                    className="h-auto w-auto"
-                  />
-                </HoverEffect>
-              </Link>
-              <NavigationMenu orientation="horizontal" className="">
-                <NavigationMenuList>
-                  <HoverEffect y={-4}>
-                    <NavigationMenuItem>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="https://playersonly.io/insights"
-                          className="text-xl"
-                        >
-                          Brands
-                        </Link>
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                  </HoverEffect>
-                  <HoverEffect y={-4}>
-                    <NavigationMenuItem>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="https://playersonly.io/athletes"
-                          className="text-xl"
-                        >
-                          Athletes
-                        </Link>
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                  </HoverEffect>
-                  <HoverEffect y={-4}>
-                    <NavigationMenuItem>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="https://www.playersonly.ai/"
-                          className="text-xl"
-                        >
-                          AI
-                        </Link>
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                  </HoverEffect>
-                  <HoverEffect y={-4}>
-                    <NavigationMenuItem>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="https://playersonly.io/about"
-                          className="text-xl"
-                        >
-                          About
-                        </Link>
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                  </HoverEffect>
-                </NavigationMenuList>
-              </NavigationMenu>
-            </div>
-            <ModeToggle></ModeToggle>
-          </div>
-          {children}
+          <HeaderBar>{children}</HeaderBar>
         </ThemeProvider>
       </body>
     </html>
