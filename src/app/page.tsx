@@ -49,8 +49,8 @@ export default function Home() {
                 </Button>
               </HoverEffect>
               <FadeIn time={1.3}>
-                <div className="border-2 rounded-3xl justify-center items-center flex p-3 shadow-md h-24 sm:h-12 leading-5">
-                  <b>30+ current partner brands</b>
+                <div className="border-2 rounded-3xl font-bold justify-center items-center flex p-3 shadow-md h-24 sm:h-12 leading-5">
+                  30+ current partner brands
                 </div>
               </FadeIn>
             </div>
