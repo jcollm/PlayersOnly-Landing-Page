@@ -31,7 +31,7 @@ export function HeaderBar({ children }: { children: React.ReactNode }) {
       <div className="sticky top-0 z-50 flex items-center justify-center w-full bg-background border-b-2 h-20">
         <div className="flex flex-row flex-grow items-center justify-between p-6 max-w-[90rem]">
           <div className="flex flex-row items-center gap-8">
-            <Link href="/" className="inline-block">
+            <Link href="https://playersonly.io" className="inline-block">
               <HoverEffect scale={1.1}>
                 <Image
                   src="/logo.png"
