@@ -24,7 +24,7 @@ export default function Home() {
         {/* Centered content */}
 
         <div className="relative z-20 flex items-center justify-center h-screen">
-          <div className="filter bg-background/70 dark:bg-background/30 backdrop-blur-sm rounded-xl p-4 md:p-8 backdrop-contrast-100 text-center max-w-3xl m-9 overflow-hidden">
+          <div className="filter bg-background/70 dark:bg-background/30 backdrop-blur-sm rounded-xl p-4 md:p-8 backdrop-contrast-100 text-center max-w-3xl m-4 md:m-9 overflow-hidden">
             <h1 className="text-5xl font-bold mb-4 leading-[4rem]">
               PlayersOnly Brand Partners
             </h1>
@@ -68,6 +68,11 @@ export default function Home() {
           text="Nulla in turpis congue, auctor nisi sit amet, ornare lectus. Aenean mollis congue fermentum. Sed lacinia dolor sed nibh venenatis consequat in a ante. Phasellus id erat ultrices dui rhoncus accumsan sed et magna. Vivamus eget nibh malesuada, viverra nibh dictum, mattis orci."
           image="/po_insights_details.png"
           reverse
+        />
+        <FeatureSection
+          title="All-In-One Social Media"
+          text="Curabitur tempus malesuada quam vel tempor. Phasellus eleifend porttitor erat, non venenatis dolor tempus eget. Maecenas in vulputate est, in sagittis magna. Vivamus ac libero ex. In faucibus elementum augue, et aliquet magna mattis et."
+          image="/placeholder.png"
         />
       </section>
     </>
